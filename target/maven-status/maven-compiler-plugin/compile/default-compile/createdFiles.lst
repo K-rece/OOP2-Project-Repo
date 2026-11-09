@@ -1,1 +1,14 @@
-com\example\App.class
+com\example\TelemetryEvent.class
+com\example\TelemetryObserver.class
+com\example\ClassAdapter.class
+com\example\TelemetryExtension.class
+com\example\bluej\ClassAdapter.class
+com\example\EventStore.class
+com\example\TelemetryCollector.class
+com\example\PackageAdapter.class
+com\example\bluej\CompileAdapter.class
+com\example\bluej\InvocationAdapter.class
+com\example\bluej\PackageAdapter.class
+com\example\InvocationAdapter.class
+com\example\TelemetryEventFactory.class
+com\example\EventType.class
