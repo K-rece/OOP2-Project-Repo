@@ -13,39 +13,61 @@ import com.google.gson.JsonObject;
 
 public class JsonEventSerialiser implements EventSerialiser {
 
-  static final String SCHEMA_VERSION = "1.0";
+  static final String SCHEMA_VERSION = "1.1";
   private final Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
   @Override
-  public String serialize(List<TelemetryEvent> events) {
+  public String serialise(SessionInfo session, List<TelemetryEvent> events) {
 
     List<TelemetryEvent> ordered = new ArrayList<>(events);
     ordered.sort(Comparator.comparingLong(TelemetryEvent::getTimestamp));
 
-    JsonArray eventArray = new JsonArray();
-    int sequence = 1;
-  
-    for (TelemetryEvent event : ordered) {
-      eventArray.add(toJson(event, sequence++));
-    }
-
-
-    //converts events into text
     JsonObject root = new JsonObject();
     root.addProperty("schemaVersion", SCHEMA_VERSION);
-    root.addProperty("eventCount", ordered.size());
-    root.add("events", eventArray);
+    root.add("session", sessionToJson(session));
+    root.add("summary", summaryToJson(new SessionStatistics(ordered)));
+    root.add("events", eventsToJson(ordered));
     return gson.toJson(root);
   }
 
-  //sends the converted text into a json file
-  private JsonObject toJson(TelemetryEvent event, int sequence) {
+  private JsonObject sessionToJson(SessionInfo session) {
 
     JsonObject obj = new JsonObject();
-    obj.addProperty("sequence", sequence);
-    obj.addProperty("type", event.getEventType().name());
-    obj.addProperty("timestamp", Instant.ofEpochMilli(event.getTimestamp()).toString());
-    obj.add("data", gson.toJsonTree(new TreeMap<>(event.getData())));
+    obj.addProperty("sessionId", session.getSessionId());
+    obj.addProperty("studentId", session.getStudentId());
+    obj.addProperty("projectName", session.getProjectName());
+    obj.addProperty("startTime", isoTime(session.getStartMillis()));
+    obj.addProperty("endTime", isoTime(session.getEndMillis()));
+    obj.addProperty("durationSeconds", session.getDurationMillis() / 1000);
     return obj;
+  }
+
+  private JsonObject summaryToJson(SessionStatistics stats) {
+
+    JsonObject obj = new JsonObject();
+    obj.addProperty("eventCount", stats.getEventCount());
+    obj.addProperty("compilationAttempts", stats.getCompilationAttempts());
+    obj.addProperty("successfulCompilations", stats.getSuccessfulCompilations());
+    obj.addProperty("failedCompilations", stats.getFailedCompilations());
+    obj.addProperty("averageSecondsBetweenCompiles", stats.getAverageSecondsBetweenCompiles());
+    return obj;
+  }
+
+  private JsonArray eventsToJson(List<TelemetryEvent> events) {
+
+    JsonArray array = new JsonArray();
+
+    for (TelemetryEvent event : events) {
+      JsonObject obj = new JsonObject();
+      obj.addProperty("type", event.getEventType().name());
+      obj.addProperty("timestamp", isoTime(event.getTimestamp()));
+      obj.add("data", gson.toJsonTree(new TreeMap<>(event.getData())));
+      array.add(obj);
+    }
+    return array;
+  }
+
+  private static String isoTime(long millis) {
+    return Instant.ofEpochMilli(millis).toString();
   }
 }

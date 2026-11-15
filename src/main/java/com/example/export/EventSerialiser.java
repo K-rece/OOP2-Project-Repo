@@ -4,6 +4,6 @@ import java.util.List;
 import com.example.TelemetryEvent;
 
 public interface EventSerialiser {
-  String serialize(List<TelemetryEvent> events);
+  String serialise(SessionInfo session, List<TelemetryEvent> events);
 }
 
