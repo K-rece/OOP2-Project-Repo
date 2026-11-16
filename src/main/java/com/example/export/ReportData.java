@@ -71,7 +71,7 @@ public class ReportData {
     List<TelemetryEvent> timeline = new ArrayList<>();
     for (TelemetryEvent event : events) {
       EventType type = event.getEventType();
-      if (type == EventType.CLASS_CREATED || type == EventType.CLASS_DELETED) {
+      if (type == EventType.CLASS_CREATED || type == EventType.CLASS_DELETED || type == EventType.METHOD_ADDED) {
         timeline.add(event);
       }
     }

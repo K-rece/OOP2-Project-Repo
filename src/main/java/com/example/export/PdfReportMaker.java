@@ -140,11 +140,22 @@ public class PdfReportMaker {
     for (TelemetryEvent event : data.getClassTimeline()) {
       c.ensureSpace(ROW);
       c.tableRow(cols, right);
-      String action = event.getEventType() == EventType.CLASS_CREATED ? "Created" : "Deleted";
+
+      String action;
+      String name = String.valueOf(event.getData().get("className"));
+
+      if (event.getEventType() == EventType.METHOD_ADDED) {
+        action = "Method added";
+        name = name + "." + event.getData().get("method");
+      } else if (event.getEventType() == EventType.CLASS_CREATED) {
+        action = "Class created";
+      } else {
+        action = "Class deleted";
+      }
+
       c.text(REGULAR, 10, cols[0] + PAD, timeOnly.format(Instant.ofEpochMilli(event.getTimestamp())));
       c.text(REGULAR, 10, cols[1] + PAD, action);
-      c.text(REGULAR, 10, cols[2] + PAD, fit(String.valueOf(event.getData().get("className")),
-          REGULAR, 10, right - cols[2] - 2 * PAD));
+      c.text(REGULAR, 10, cols[2] + PAD, fit(name, REGULAR, 10, right - cols[2] - 2 * PAD));
       c.down(ROW);
     }
   }
