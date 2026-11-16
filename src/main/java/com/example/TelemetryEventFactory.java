@@ -60,4 +60,11 @@ public class TelemetryEventFactory {
             "exception", exception));
   }
 
+  public TelemetryEvent idleStarted() {
+    return new TelemetryEvent(EventType.IDLE_START, clock.getAsLong(), Map.of());
+  }
+
+  public TelemetryEvent idleEnded() {
+    return new TelemetryEvent(EventType.IDLE_END, clock.getAsLong(), Map.of());
+  }
 }
