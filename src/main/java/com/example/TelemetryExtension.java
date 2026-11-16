@@ -2,6 +2,7 @@ package com.example;
 
 import java.net.URL;
 import java.util.List;
+
 import com.example.bluej.ClassAdapter;
 import com.example.bluej.CompileAdapter;
 import com.example.bluej.EditorActivityPoller;
@@ -10,6 +11,7 @@ import com.example.bluej.ExportPackageListener;
 import com.example.bluej.InvocationAdapter;
 import com.example.bluej.MethodAdapter;
 import com.example.bluej.PackageAdapter;
+import com.example.bluej.StudentIdPreferences;
 import com.example.export.ExportService;
 import com.example.export.JsonEventSerialiser;
 import com.example.export.JsonReportExporter;
@@ -23,17 +25,21 @@ public class TelemetryExtension extends Extension {
 
   @Override
   public void startup(BlueJ blueJ) {
-
     TelemetryCollector collector = new TelemetryCollector();
     EventStore store = new EventStore();
     collector.subscribe(store);
     TelemetryEventFactory factory = new TelemetryEventFactory();
 
+
     ActivityMonitor activityMonitor = new ActivityMonitor(collector, factory);
     collector.subscribe(activityMonitor);
     new EditorActivityPoller(blueJ, activityMonitor).start();
 
-    SessionRecorder recorder = new SessionRecorder();
+
+    StudentIdPreferences studentIdPreferences = new StudentIdPreferences(blueJ);
+    blueJ.setPreferenceGenerator(studentIdPreferences);
+    SessionRecorder recorder = new SessionRecorder(System::currentTimeMillis,
+        studentIdPreferences::getStudentId);
     collector.subscribe(recorder);
     ExportService exportService = new ExportService(List.of(
         new JsonReportExporter(new JsonEventSerialiser()),

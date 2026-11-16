@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.LongSupplier;
+import java.util.function.Supplier;
 import com.example.EventType;
 import com.example.TelemetryEvent;
 import com.example.TelemetryObserver;
 
-
 public class SessionRecorder implements TelemetryObserver {
-    
+
   private final LongSupplier clock;
+  private final Supplier<String> studentId;
   private final List<TelemetryEvent> events = new ArrayList<>();
   private boolean active;
   private String sessionId;
@@ -23,7 +24,12 @@ public class SessionRecorder implements TelemetryObserver {
   }
 
   public SessionRecorder(LongSupplier clock) {
+    this(clock, () -> SessionInfo.STUDENT_ID_PLACEHOLDER);
+  }
+
+  public SessionRecorder(LongSupplier clock, Supplier<String> studentId) {
     this.clock = clock;
+    this.studentId = studentId;
   }
 
   public synchronized void start(String projectName) {
@@ -43,7 +49,6 @@ public class SessionRecorder implements TelemetryObserver {
 
   @Override
   public synchronized void onEvent(TelemetryEvent event) {
-
     if (event.getEventType() == EventType.PROJECT_OPENED) {
       begin(String.valueOf(event.getData().get("projectName")), event.getTimestamp());
     }
@@ -61,8 +66,16 @@ public class SessionRecorder implements TelemetryObserver {
       throw new IllegalStateException("No session is running");
     }
     long end = Math.max(clock.getAsLong(), startMillis);
-    SessionInfo info = new SessionInfo(sessionId, SessionInfo.STUDENT_ID_PLACEHOLDER, projectName, startMillis, end);
+    SessionInfo info = new SessionInfo(sessionId, currentStudentId(), projectName, startMillis, end);
     return new RecordedSession(info, events);
+  }
+
+  private String currentStudentId() {
+    String id = studentId.get();
+    if (id == null || id.trim().isEmpty()) {
+      return SessionInfo.STUDENT_ID_PLACEHOLDER;
+    }
+    return id.trim();
   }
 
   public synchronized RecordedSession finish() {
@@ -72,4 +85,3 @@ public class SessionRecorder implements TelemetryObserver {
     return session;
   }
 }
-
