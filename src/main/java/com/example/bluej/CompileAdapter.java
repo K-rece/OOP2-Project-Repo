@@ -17,31 +17,32 @@ public class CompileAdapter implements CompileListener {
 
   @Override
   public void compileError(CompileEvent e) {
-    collector.publish(factory.compileError(
-        e.getFiles().length > 0 ? e.getFiles()[0].getName() : "unknown",
-        e.getErrorLineNumber(), e.getErrorMessage()));
+    if (!e.isUserGeneratedCompilation()) {
+      return;
+    }
+    collector.publish(factory.compileError(e.getFiles().length > 0 ? e.getFiles()[0].getName() : "unknown", e.getErrorLineNumber(), e.getErrorMessage()));
   }
 
   @Override
   public void compileSucceeded(CompileEvent e) {
+    if (!e.isUserGeneratedCompilation()) {
+      return;
+    }
     collector.publish(factory.compileSuccess());
   }
 
   @Override
   public void compileFailed(CompileEvent arg0) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'compileFailed'");
+
   }
 
   @Override
   public void compileStarted(CompileEvent arg0) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'compileStarted'");
+
   }
 
   @Override
   public void compileWarning(CompileEvent arg0) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'compileWarning'");
+    
   }
 }
