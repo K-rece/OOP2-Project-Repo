@@ -2,12 +2,13 @@ package com.example;
 
 import java.net.URL;
 import java.util.List;
-
 import com.example.bluej.ClassAdapter;
 import com.example.bluej.CompileAdapter;
+import com.example.bluej.EditorActivityPoller;
 import com.example.bluej.ExportMenuGenerator;
 import com.example.bluej.ExportPackageListener;
 import com.example.bluej.InvocationAdapter;
+import com.example.bluej.MethodAdapter;
 import com.example.bluej.PackageAdapter;
 import com.example.export.ExportService;
 import com.example.export.JsonEventSerialiser;
@@ -15,7 +16,6 @@ import com.example.export.JsonReportExporter;
 import com.example.export.PdfReportExporter;
 import com.example.export.PdfReportMaker;
 import com.example.export.SessionRecorder;
-
 import bluej.extensions2.BlueJ;
 import bluej.extensions2.Extension;
 
@@ -23,10 +23,15 @@ public class TelemetryExtension extends Extension {
 
   @Override
   public void startup(BlueJ blueJ) {
+
     TelemetryCollector collector = new TelemetryCollector();
     EventStore store = new EventStore();
     collector.subscribe(store);
     TelemetryEventFactory factory = new TelemetryEventFactory();
+
+    ActivityMonitor activityMonitor = new ActivityMonitor(collector, factory);
+    collector.subscribe(activityMonitor);
+    new EditorActivityPoller(blueJ, activityMonitor).start();
 
     SessionRecorder recorder = new SessionRecorder();
     collector.subscribe(recorder);
@@ -35,6 +40,7 @@ public class TelemetryExtension extends Extension {
         new PdfReportExporter(new PdfReportMaker())));
 
     blueJ.addCompileListener(new CompileAdapter(collector, factory));
+    blueJ.addCompileListener(new MethodAdapter(blueJ, collector, factory, new MethodTracker()));
     blueJ.addPackageListener(new PackageAdapter(collector, factory));
     blueJ.addPackageListener(new ExportPackageListener(recorder, exportService));
     blueJ.addClassListener(new ClassAdapter(collector, factory));
