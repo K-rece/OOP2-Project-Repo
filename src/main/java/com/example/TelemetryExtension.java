@@ -26,8 +26,6 @@ public class TelemetryExtension extends Extension {
   @Override
   public void startup(BlueJ blueJ) {
     TelemetryCollector collector = new TelemetryCollector();
-    EventStore store = new EventStore();
-    collector.subscribe(store);
     TelemetryEventFactory factory = new TelemetryEventFactory();
 
 
