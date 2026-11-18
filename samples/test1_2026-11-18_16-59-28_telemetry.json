@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "1.1",
+  "session": {
+    "sessionId": "176a7c0a-e3c9-4225-9ba9-448cc7458d4b",
+    "studentId": "816047753",
+    "projectName": "test1",
+    "startTime": "2026-11-18T20:59:28.709Z",
+    "endTime": "2026-11-18T21:01:37.362Z",
+    "durationSeconds": 128
+  },
+  "summary": {
+    "eventCount": 33,
+    "compilationAttempts": 2,
+    "successfulCompilations": 2,
+    "failedCompilations": 0,
+    "averageSecondsBetweenCompiles": 28.5
+  },
+  "events": [
+    {
+      "type": "PROJECT_OPENED",
+      "timestamp": "2026-11-18T20:59:28.709Z",
+      "data": {
+        "projectName": "test1"
+      }
+    },
+    {
+      "type": "CLASS_CREATED",
+      "timestamp": "2026-11-18T20:59:31.345Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T20:59:31.347Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T20:59:41.090Z",
+      "data": {
+        "charsChanged": -93,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T20:59:46.099Z",
+      "data": {
+        "charsChanged": 4,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T20:59:51.091Z",
+      "data": {
+        "charsChanged": -9,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T20:59:56.098Z",
+      "data": {
+        "charsChanged": 20,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:01.091Z",
+      "data": {
+        "charsChanged": 19,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:02.519Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:03.152Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:03.577Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:04.328Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:06.098Z",
+      "data": {
+        "charsChanged": 13,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:11.090Z",
+      "data": {
+        "charsChanged": 10,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:16.098Z",
+      "data": {
+        "charsChanged": 33,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:21.090Z",
+      "data": {
+        "charsChanged": 16,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:26.098Z",
+      "data": {
+        "charsChanged": 6,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:27.681Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "COMPILE_SUCCESS",
+      "timestamp": "2026-11-18T21:00:27.691Z",
+      "data": {}
+    },
+    {
+      "type": "METHOD_ADDED",
+      "timestamp": "2026-11-18T21:00:27.691Z",
+      "data": {
+        "className": "dog",
+        "method": "bark()"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:30.149Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:31.090Z",
+      "data": {
+        "charsChanged": 11,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:36.099Z",
+      "data": {
+        "charsChanged": 13,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:41.090Z",
+      "data": {
+        "charsChanged": 11,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:44.154Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:45.498Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:46.098Z",
+      "data": {
+        "charsChanged": 18,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:51.091Z",
+      "data": {
+        "charsChanged": 9,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:00:56.098Z",
+      "data": {
+        "charsChanged": 2,
+        "className": "dog"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:00:56.170Z",
+      "data": {
+        "className": "dog"
+      }
+    },
+    {
+      "type": "COMPILE_SUCCESS",
+      "timestamp": "2026-11-18T21:00:56.177Z",
+      "data": {}
+    },
+    {
+      "type": "METHOD_ADDED",
+      "timestamp": "2026-11-18T21:00:56.177Z",
+      "data": {
+        "className": "dog",
+        "method": "getBreed()"
+      }
+    },
+    {
+      "type": "PROJECT_CLOSED",
+      "timestamp": "2026-11-18T21:01:37.362Z",
+      "data": {
+        "projectName": "test1"
+      }
+    }
+  ]
+}

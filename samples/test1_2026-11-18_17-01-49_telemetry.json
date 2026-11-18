@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.1",
+  "session": {
+    "sessionId": "5fdc7e3d-6eff-421c-bb18-b4e105e8af89",
+    "studentId": "816047753",
+    "projectName": "test1",
+    "startTime": "2026-11-18T21:01:49.853Z",
+    "endTime": "2026-11-18T21:05:05.665Z",
+    "durationSeconds": 195
+  },
+  "summary": {
+    "eventCount": 31,
+    "compilationAttempts": 2,
+    "successfulCompilations": 0,
+    "failedCompilations": 2,
+    "averageSecondsBetweenCompiles": 0.1
+  },
+  "events": [
+    {
+      "type": "PROJECT_OPENED",
+      "timestamp": "2026-11-18T21:01:49.853Z",
+      "data": {
+        "projectName": "test1"
+      }
+    },
+    {
+      "type": "CLASS_CREATED",
+      "timestamp": "2026-11-18T21:01:54.439Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:01:54.443Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:00.582Z",
+      "data": {
+        "charsChanged": -87,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:05.574Z",
+      "data": {
+        "charsChanged": 12,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:10.581Z",
+      "data": {
+        "charsChanged": 7,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:15.573Z",
+      "data": {
+        "charsChanged": 10,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:40.581Z",
+      "data": {
+        "charsChanged": 13,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:45.574Z",
+      "data": {
+        "charsChanged": 17,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:50.582Z",
+      "data": {
+        "charsChanged": 14,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:02:55.069Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:02:55.574Z",
+      "data": {
+        "charsChanged": 20,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:02:55.680Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:02:57.818Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:03:00.581Z",
+      "data": {
+        "charsChanged": 12,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:02.106Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:02.137Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:02.236Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:02.264Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:02.723Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:03:05.574Z",
+      "data": {
+        "charsChanged": 21,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:03:10.581Z",
+      "data": {
+        "charsChanged": 5,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:03:14.536Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "EDIT",
+      "timestamp": "2026-11-18T21:03:15.574Z",
+      "data": {
+        "charsChanged": 20,
+        "className": "cat"
+      }
+    },
+    {
+      "type": "IDLE_START",
+      "timestamp": "2026-11-18T21:03:15.574Z",
+      "data": {}
+    },
+    {
+      "type": "IDLE_END",
+      "timestamp": "2026-11-18T21:04:38.366Z",
+      "data": {}
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:04:38.366Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "COMPILE_ERROR",
+      "timestamp": "2026-11-18T21:04:38.381Z",
+      "data": {
+        "file": "cat.java",
+        "line": 32,
+        "message": "invalid method declaration; return type required"
+      }
+    },
+    {
+      "type": "CLASS_MODIFIED",
+      "timestamp": "2026-11-18T21:04:38.381Z",
+      "data": {
+        "className": "cat"
+      }
+    },
+    {
+      "type": "COMPILE_ERROR",
+      "timestamp": "2026-11-18T21:04:38.502Z",
+      "data": {
+        "file": "cat.java",
+        "line": 37,
+        "message": "invalid method declaration; return type required"
+      }
+    },
+    {
+      "type": "PROJECT_CLOSED",
+      "timestamp": "2026-11-18T21:05:05.665Z",
+      "data": {
+        "projectName": "test1"
+      }
+    }
+  ]
+}
