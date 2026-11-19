@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import com.example.TelemetryEventFactory;
 
+
+  /** @author Justin Craigwell */
 class SessionRecorderTest {
 
   private static final long T = 1_700_000_000_000L;

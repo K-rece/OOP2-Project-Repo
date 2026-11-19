@@ -7,12 +7,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.time.ZoneOffset;
 import java.util.List;
-
 import org.junit.jupiter.api.Test;
-
 import com.example.TelemetryEvent;
 
-class ExportServiceTest {
+
+ /** @author Justin Craigwell */
+ class ExportServiceTest {
     
   private static final long T = 1_700_000_000_000L;
 

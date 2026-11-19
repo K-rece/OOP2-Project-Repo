@@ -16,6 +16,7 @@ import bluej.extensions2.event.CompileListener;
 
 
 /**
+ * @author Ubayd Razack
  * Adapter: after each successful compile the student starts, asks BlueJ for the compiled classes'
  * methods and publishes a {@link com.example.EventType#METHOD_ADDED} event for each new one.
  * Working out which methods are new is delegated to {@link MethodTracker}.

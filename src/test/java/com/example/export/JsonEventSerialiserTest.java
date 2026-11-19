@@ -9,7 +9,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-class JsonEventSerialiserTest {
+ /** @author Justin Craigwell */
+ class JsonEventSerialiserTest {
   private static final long T = 1_700_000_000_000L; // 2023-11-14T22:13:20Z
 
   private final EventSerialiser serialiser = new JsonEventSerialiser();

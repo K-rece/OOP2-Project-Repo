@@ -1,13 +1,13 @@
 package com.example.export;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.List;
-
 import org.junit.jupiter.api.Test;
-
 import com.example.TelemetryEventFactory;
 
+
+
+  /** @author Justin Craigwell */
 class SessionStatisticsTest {
   private static final long T = 1_700_000_000_000L;
 

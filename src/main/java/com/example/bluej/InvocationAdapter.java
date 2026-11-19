@@ -6,6 +6,7 @@ import bluej.extensions2.event.InvocationFinishedEvent;
 import bluej.extensions2.event.InvocationFinishedListener;
 
 /**
+ * @author Krece Hayes
  * Adapter: converts BlueJ's "method call finished" events (when the student runs a method from
  * BlueJ's interface) into {@link com.example.EventType#RUN_FINISHED} or {@link
  * com.example.EventType#RUN_EXCEPTION} events.

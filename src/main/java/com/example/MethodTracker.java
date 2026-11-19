@@ -11,6 +11,7 @@ import java.util.TreeSet;
 
 
 /**
+ * @author Ubayd Razack
  * Remembers each class's methods from its last successful compile, so the methods added since then
  * can be reported.
  */

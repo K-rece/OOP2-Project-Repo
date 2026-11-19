@@ -6,7 +6,9 @@ import java.time.ZoneId;
 import java.util.List;
 import com.example.TelemetryEvent;
 
-/** Saves a session as a {@code .pdf} report, using {@link PdfReportMaker}. */
+/**
+ * @author Ubayd Razack
+ *  Saves a session as a {@code .pdf} report, using {@link PdfReportMaker}. */
 public class PdfReportExporter extends ReportExporter {
   
   /** makes the pdf. */

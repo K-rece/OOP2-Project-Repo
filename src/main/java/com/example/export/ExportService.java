@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Runs every report exporter for a session. */
+/** 
+ * @author Ubayd Razack
+ * Runs every report exporter for a session. */
 public class ExportService {
     
   /** The exporters to run, one per file format. */

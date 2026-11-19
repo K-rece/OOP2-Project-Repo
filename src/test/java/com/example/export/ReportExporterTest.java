@@ -16,6 +16,8 @@ import org.junit.jupiter.api.Test;
 import com.example.TelemetryEventFactory;
 import com.google.gson.JsonParser;
 
+
+ /** @author Justin Craigwell */
 class ReportExporterTest {
   private static final long T = 1_700_000_000_000L;
 

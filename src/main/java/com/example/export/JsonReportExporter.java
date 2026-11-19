@@ -9,6 +9,7 @@ import java.util.List;
 import com.example.TelemetryEvent;
 
 /**
+ * @author Ubayd Razack
  * Saves a session as a {@code .json} file, using any {@link EventSerialiser} to produce the text.
  */
 public class JsonReportExporter extends ReportExporter {

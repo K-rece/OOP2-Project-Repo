@@ -4,6 +4,7 @@ import java.util.List;
 import com.example.TelemetryEvent;
 
 /**
+ * @author Ubayd Razack
  * Turns a session and its events into text in some output format. Code that saves files depends on this interface rather than on JSON, so another format
  * could be added without changing existing classes.
  */

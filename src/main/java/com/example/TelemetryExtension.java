@@ -21,6 +21,8 @@ import bluej.extensions2.BlueJ;
 import bluej.extensions2.Extension;
 
 /**
+ * @author Krece Hayes
+ * @author Ubayd Razack
  *  BlueJ creates this class when it starts and calls {@link #startup(BlueJ)}, which builds every part of the plugin and connects them
  */
 public class TelemetryExtension extends Extension {

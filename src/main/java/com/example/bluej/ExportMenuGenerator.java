@@ -8,6 +8,7 @@ import bluej.extensions2.MenuGenerator;
 import javafx.scene.control.MenuItem;
 
 /**
+ * @author Ubayd Razack
  * Adds the option/button "Export Telemetry Report" to BlueJ's Tools menu, so the student can save the JSON and PDF
  * for the session so far at any time.
  */

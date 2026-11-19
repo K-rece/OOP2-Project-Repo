@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
+ * @author Krece Hayes
  * Receives every telemetry event and passes it on to all subscribed {@link TelemetryObserver}s. The BlueJ adapters publish here; the session recorder and
  * activity monitor listen here. Neither side knows about the other.
  */

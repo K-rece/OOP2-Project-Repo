@@ -11,6 +11,7 @@ import com.example.TelemetryEvent;
 
 
 /**
+ * @author Ubayd Razack
  * Works out everything the PDF report shows. The PDF maker only draws the values, so all the calculations can be unit tested here.
  */
 public class ReportData {

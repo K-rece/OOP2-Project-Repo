@@ -3,6 +3,7 @@ package com.example;
 import java.util.Map;
 
 /**
+ * @author Krece Hayes
  * One recorded student action: what happened ({@link EventType}), when, and any details. Events
  * are immutable which means that once created they cannot be changed. Create them with {@link
  * TelemetryEventFactory} rather than this constructor.

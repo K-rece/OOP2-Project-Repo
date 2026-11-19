@@ -1,6 +1,7 @@
 package com.example;
 
 /**
+ *  @author Krece Hayes
  * The kinds of student activity the plugin records.
  * Each {@link TelemetryEvent} has exactly one of these types.
  */

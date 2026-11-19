@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import com.example.EventType;
 import com.example.TelemetryEventFactory;
 
+  /** @author Justin Craigwell */
 class ReportDataTest {
   private static final long T = 1_700_000_000_000L;
   private static final long TEN_MIN = 600_000;

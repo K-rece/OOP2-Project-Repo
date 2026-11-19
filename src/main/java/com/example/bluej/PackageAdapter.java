@@ -8,6 +8,7 @@ import bluej.extensions2.event.PackageEvent;
 import bluej.extensions2.event.PackageListener;
 
 /**
+ * @author Krece Hayes
  * Adapter: converts BlueJ's package events into {@link com.example.EventType#PROJECT_OPENED} and
  * {@link com.example.EventType#PROJECT_CLOSED} events.
  */

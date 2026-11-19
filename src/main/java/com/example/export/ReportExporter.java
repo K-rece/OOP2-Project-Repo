@@ -9,6 +9,7 @@ import java.util.List;
 import com.example.TelemetryEvent;
 
 /**
+ * @author Ubayd Razack
  * {@link #export(SessionInfo, List, File)} fixes the steps for saving a report
  * (work out the file name, then write the file), and each subclass supplies only the
  * format-specific parts: {@link #extension()} and {@link #write(SessionInfo, List, File)}.

@@ -6,6 +6,7 @@ import java.util.function.LongSupplier;
 
 
 /**
+ * @author Ubayd Razack
  * Turns snapshots of the open editors into {@link EventType#EDIT}, {@link EventType#IDLE_START}
  * and {@link EventType#IDLE_END} events.
  *

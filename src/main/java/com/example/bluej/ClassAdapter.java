@@ -8,6 +8,7 @@ import bluej.extensions2.event.ClassEvent;
 import bluej.extensions2.event.ClassListener;
 
 /**
+ * @author Krece Hayes
  * Adapter: converts BlueJ's class events into the plugin's class events. The first time a class is
  * seen it is reported as {@link com.example.EventType#CLASS_CREATED}; after that, changes are
  * {@link com.example.EventType#CLASS_MODIFIED}, and removal is {@link

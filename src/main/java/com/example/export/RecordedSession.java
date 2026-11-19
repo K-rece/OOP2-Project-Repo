@@ -4,6 +4,7 @@ import java.util.List;
 import com.example.TelemetryEvent;
 
 /**
+ * @author Ubayd Razack
  * A finished ession: its details plus the events recorded during it.
  */
 public class RecordedSession {

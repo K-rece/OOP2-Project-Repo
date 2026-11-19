@@ -7,6 +7,7 @@ import bluej.extensions2.event.PackageEvent;
 import bluej.extensions2.event.PackageListener;
 
 /**
+ * @author Ubayd Razack
  * Starts a session when a project opens, and saves the session's JSON and PDF into the project's folder when it closes.
  */
 public class ExportPackageListener implements PackageListener {

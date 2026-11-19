@@ -9,6 +9,7 @@ import javafx.scene.layout.Pane;
 
 
 /**
+ * @author Ubayd Razack
  * Adds a "Telemetry student ID" text input box to BlueJ's Tools -> Preferences -> Extensions panel.
  */
 public class StudentIdPreferences implements PreferenceGenerator {

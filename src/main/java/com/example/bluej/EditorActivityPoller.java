@@ -15,6 +15,7 @@ import javafx.application.Platform;
 import javafx.util.Duration;
 
 /**
+ * @author Ubayd Razack
  * Every few seconds, reads the text length of each open editor and passes the numbers to the
  * {@link ActivityMonitor}, which decides what counts as an edit or idle time. Uses a JavaFX {@link
  * Timeline} so the editors are only read on BlueJ's own user-interface thread.

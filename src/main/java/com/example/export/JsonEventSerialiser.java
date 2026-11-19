@@ -12,6 +12,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 /**
+ * @author Ubayd Razack
  * Writes a session as a JSON document with three parts: {@code session}
  * (details and times), {@code summary} (compile counts and timing) and {@code events} (every event
  * in time order, each with an ISO-8601 UTC timestamp).

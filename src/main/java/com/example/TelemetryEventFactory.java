@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.function.LongSupplier;
 
 /**
+ * @author Krece Hayes
  * Creates {@link TelemetryEvent}s with the correct type, data keys and current time, so the rest
  * of the plugin never builds events by hand. Takes a clock so tests can fix the time.
  */

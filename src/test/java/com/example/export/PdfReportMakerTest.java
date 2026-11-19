@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import com.example.TelemetryEvent;
 import com.example.TelemetryEventFactory;
 
+/** @author Justin Craigwell */
 class PdfReportMakerTest {
   private static final long T = 1_700_000_000_000L; // 22:13:20 UTC
 

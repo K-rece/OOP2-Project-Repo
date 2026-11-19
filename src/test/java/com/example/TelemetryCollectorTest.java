@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
+
+  /** @author Justin Craigwell */
 class TelemetryCollectorTest {
     
   private final TelemetryCollector collector = new TelemetryCollector();

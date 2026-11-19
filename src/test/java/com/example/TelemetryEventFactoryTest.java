@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
 
+
+ /** @author Justin Craigwell */
 class TelemetryEventFactoryTest {
 
   private static final long T = 1_700_000_000_000L;

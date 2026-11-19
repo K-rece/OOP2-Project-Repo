@@ -6,6 +6,7 @@ import bluej.extensions2.event.CompileEvent;
 import bluej.extensions2.event.CompileListener;
 
 /**
+ * @author Krece Hayes
  * Adapter: converts BlueJ's compile events into {@link com.example.EventType#COMPILE_SUCCESS} and
  * {@link com.example.EventType#COMPILE_ERROR} events. Only compiles the student starts are
  * recorded; BlueJ's automatic background error checks are ignored, so the counts match what the

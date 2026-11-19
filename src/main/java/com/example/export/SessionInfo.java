@@ -1,6 +1,8 @@
 package com.example.export;
 
-/** The details that identify one coding session: who, which project, and when. */
+/**
+ * @author Ubayd Razack
+ *  The details that identify one coding session: who, which project, and when. */
 public class SessionInfo {
 
   /** Student ID used when the student hasn;t entered one in BlueJ's preferences. */

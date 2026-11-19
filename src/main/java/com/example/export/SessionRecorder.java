@@ -10,6 +10,7 @@ import com.example.TelemetryEvent;
 import com.example.TelemetryObserver;
 
 /**
+ * @author Ubayd Razack
  * Observer that keeps the events for the current session only. A session starts when a project
  * opens and ends when it closes; {@link #finish()} hands back everything recorded and resets for
  * the next session. The student ID is read from BlueJ's preferences each time a report is made.

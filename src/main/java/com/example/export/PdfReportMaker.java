@@ -18,6 +18,7 @@ import com.example.TelemetryEvent;
 
 
 /**
+ * @author Ubayd Razack
  * Draws a {@link ReportData} as a PDF report using Apache PDFBox {@link ReportData}.
  */
 public class PdfReportMaker {

@@ -7,6 +7,7 @@ import com.example.EventType;
 import com.example.TelemetryEvent;
 
 /**
+ * @author Ubayd Razack
  * Calculates the summary numbers for a session from its events: event count, successful and failed
  * compilations, and the average time between compiles. Used by both the JSON and the PDF.
  */
