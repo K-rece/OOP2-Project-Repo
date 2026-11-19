@@ -1,3 +1,7 @@
+# OOP2-Project-Repo
+
+COMP 3607 - OOP2 Project: A BlueJ data analysis extension plugin for collecting, formatting and analysing telemetry data produced using the BlueJ coding editor.
+
 ## Prerequisites
 
 - JDK 17 or newer, with JAVA_HOME set to the JDK folder
