@@ -37,9 +37,12 @@ mvn package
 - Windows: **C:\Program Files\BlueJ\lib\extensions2**
 - macOS: **BlueJ.app/Contents/Resources/Java/extensions2**
 
-4. At any point during recording, export by going from **Tools -> Export Telemetry Report.**
+4. Then, open or make a new project within BlueJ and begin your session. Recording of the session happens automatically.
+
+5. At any point during recording, export by going from **Tools -> Export Telemetry Report.**
 
 ### Notes
 - You can optionally enter your Student ID by navigating to the Extensions page via **Tools -> Preferences -> Extensions**
 - To uninstall plugin, delete the jar file from the extensions2 folder.
 - While it's installed, every project opened in BlueJ gets telemetry files.
+- You can check if the extension is being seen by BlueJ via **Help -> Installed Extensions**.
