@@ -101,8 +101,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">TelemetryEventFactory</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Creates <a href="TelemetryEvent.html" title="class in com.example"><code>TelemetryEvent</code></a>s with the correct type, data keys and current time, so the rest
-of the plugin never builds events by hand. Takes a clock so tests can fix the time.</div>
+<dl class="notes">
+<dt>Author:</dt>
+<dd>Krece Hayes
+Creates <a href="TelemetryEvent.html" title="class in com.example"><code>TelemetryEvent</code></a>s with the correct type, data keys and current time, so the rest
+of the plugin never builds events by hand. Takes a clock so tests can fix the time.</dd>
+</dl>
 </div>
 </section>
 <section class="summary">
@@ -119,7 +123,7 @@ of the plugin never builds events by hand. Takes a clock so tests can fix the ti
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/LongSupplier.html" title="class or interface in java.util.function" class="external-link">LongSupplier</a></code></div>
 <div class="col-second even-row-color"><code><a href="#clock" class="member-name-link">clock</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Supplies the current time in milliseconds; replaced by a fixed value in tests.</div>
+<div class="block">Supplies the current time in milliseconds</div>
 </div>
 </div>
 </section>
@@ -253,7 +257,7 @@ of the plugin never builds events by hand. Takes a clock so tests can fix the ti
 <h3>clock</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/LongSupplier.html" title="class or interface in java.util.function" class="external-link">LongSupplier</a></span>&nbsp;<span class="element-name">clock</span></div>
-<div class="block">Supplies the current time in milliseconds; replaced by a fixed value in tests.</div>
+<div class="block">Supplies the current time in milliseconds</div>
 </div>
 </section>
 </li>
@@ -305,7 +309,7 @@ of the plugin never builds events by hand. Takes a clock so tests can fix the ti
 <div class="block">Creates a <a href="EventType.html#COMPILE_ERROR"><code>EventType.COMPILE_ERROR</code></a> event.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>file</code> - the name of the file with the error, e.g. <code>Dog.java</code></dd>
+<dd><code>file</code> - the name of the file with the error</dd>
 <dd><code>line</code> - the line number of the error</dd>
 <dd><code>message</code> - the compiler's error message</dd>
 <dt>Returns:</dt>
@@ -508,7 +512,7 @@ stopped.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>className</code> - the class the method belongs to</dd>
-<dd><code>method</code> - the method's signature, e.g. <code>setName(String)</code></dd>
+<dd><code>method</code> - the method's signature</dd>
 <dt>Returns:</dt>
 <dd>the new event</dd>
 </dl>
