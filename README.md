@@ -10,11 +10,13 @@ COMP 3607 - OOP2 Project: A BlueJ data analysis extension plugin for collecting,
 ## Setup 
 
 1. Install BlueJ
-2. From the repository folder, run: (If BlueJ is installed somewhere else, change the path to that verions's lib\bluej.jar)
+2. From the repository folder, run:
 
 ```
 mvn install:install-file "-Dfile=C:\Program Files\BlueJ\lib\bluej.jar" "-DgroupId=org.bluej" "-DartifactId=bluej" "-Dversion=5.0" "-Dpackaging=jar"
 ```
+(If BlueJ is installed somewhere other than the location in this command, change the path to that verions's lib\bluej.jar)
+
 3. If you use VS Code: press Ctrl+Shift+P and run Java: Clean Java Language Server Workspace, then restart.
 
 ## Production
