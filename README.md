@@ -1,7 +1,3 @@
-# OOP2-Project-Repo
-
-COMP 3607 - OOP2 Project: A BlueJ data analysis extension plugin for collecting, formatting and analysing telemetry data produced using the BlueJ coding editor.
-
 ## Prerequisites
 
 - JDK 17 or newer, with JAVA_HOME set to the JDK folder
@@ -9,15 +5,28 @@ COMP 3607 - OOP2 Project: A BlueJ data analysis extension plugin for collecting,
 
 ## Setup 
 
-1. Install BlueJ
-2. From the repository folder, run:
+1. Clone the repository and open a terminal in its folder:
+```
+git clone https://github.com/K-rece/OOP2-Project-Repo.git
+cd OOP2-Project-Repo
+```
 
+2. Install BlueJ
+3. From the repository folder, run:
+
+On Windows: 
 ```
 mvn install:install-file "-Dfile=C:\Program Files\BlueJ\lib\bluej.jar" "-DgroupId=org.bluej" "-DartifactId=bluej" "-Dversion=5.0" "-Dpackaging=jar"
 ```
-(If BlueJ is installed somewhere other than the location in this command, change the path to that verions's lib\bluej.jar)
 
-3. If you use VS Code: press Ctrl+Shift+P and run Java: Clean Java Language Server Workspace, then restart.
+On macOS:
+```
+mvn install:install-file "-Dfile=/Applications/BlueJ.app/Contents/Resources/Java/bluej.jar" "-DgroupId=org.bluej" "-DartifactId=bluej" "-Dversion=5.0" "-Dpackaging=jar"
+```
+
+(If BlueJ is installed somewhere other than the location in this command, change the path to that version's lib\bluej.jar)
+
+4. If you use VS Code: press Ctrl+Shift+P and run Java: Clean Java Language Server Workspace, then restart.
 
 ## Production
 
@@ -26,13 +35,13 @@ mvn install:install-file "-Dfile=C:\Program Files\BlueJ\lib\bluej.jar" "-DgroupI
 mvn test
 ```
 
-2. To build and install the plugin, run:
+2. To build the plugin, run:
 
 ```
 mvn package
 ```
 
-3. After installing the plugin, copy **target/oop2-bluej-project-1.0.0.jar** into BlueJ's extensions folder which is located in:
+3. After building the plugin, copy **target/oop2-bluej-project-1.0.0.jar** into BlueJ's extensions folder which is located in:
 
 - Windows: **C:\Program Files\BlueJ\lib\extensions2**
 - macOS: **BlueJ.app/Contents/Resources/Java/extensions2**
