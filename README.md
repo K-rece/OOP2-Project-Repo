@@ -2,7 +2,12 @@
 
 COMP 3607 - OOP2 Project: A BlueJ data analysis extension plugin for collecting, formatting and analysing telemetry data produced using the BlueJ coding editor.
 
-## Prerequisites 
+## Prerequisites
+
+- JDK 17 or newer, with JAVA_HOME set to the JDK folder
+- Apache Maven 3.9 or newer, with the bin folder on your PATH
+
+## Setup 
 
 1. Install BlueJ
 2. From the repository folder, run: (If BlueJ is installed somewhere else, change the path to that verions's lib\bluej.jar)
