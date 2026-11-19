@@ -10,10 +10,27 @@ import java.util.Set;
 import java.util.TreeSet;
 
 
+/**
+ * Remembers each class's methods from its last successful compile, so the methods added since then
+ * can be reported.
+ */
 public class MethodTracker {
     
+  /** Each class name mapped to the method signatures seen at its last compile. */
   private final Map<String, Set<String>> knownMethods = new HashMap<>();
 
+  /** Creates a tracker that has not seen any classes yet. */
+  public MethodTracker() {
+  }
+
+  /**
+   * Compares a class's current methods with the ones seen last time, and remembers the current
+   * ones for next time.
+   *
+   * @param className the class that was compiled
+   * @param currentMethods the class's method signatures now
+   * @return the methods not present last time, in alphabetical order (empty if none)
+   */
   public List<String> findNewMethods(String className, Collection<String> currentMethods) {
     Set<String> previous = knownMethods.get(className);
     if (previous == null) {

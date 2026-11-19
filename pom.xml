@@ -27,7 +27,7 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>17.0.2</version> <!-- match BlueJ's JavaFX -->
+      <version>17.0.2</version>
       <scope>provided</scope>
     </dependency>
 
@@ -75,6 +75,18 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <!-- Generates the API documentation (mvn javadoc:javadoc) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.11.2</version>
+        <configuration>
+          <show>private</show>
+          <doctitle>BlueJ Telemetry Plugin API</doctitle>
+          <windowtitle>BlueJ Telemetry Plugin API</windowtitle>
+        </configuration>
       </plugin>
 
       <plugin>

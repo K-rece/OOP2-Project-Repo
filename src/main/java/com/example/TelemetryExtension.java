@@ -2,7 +2,6 @@ package com.example;
 
 import java.net.URL;
 import java.util.List;
-
 import com.example.bluej.ClassAdapter;
 import com.example.bluej.CompileAdapter;
 import com.example.bluej.EditorActivityPoller;
@@ -21,8 +20,22 @@ import com.example.export.SessionRecorder;
 import bluej.extensions2.BlueJ;
 import bluej.extensions2.Extension;
 
+/**
+ *  BlueJ creates this class when it starts and calls {@link #startup(BlueJ)}, which builds every part of the plugin and connects them
+ */
 public class TelemetryExtension extends Extension {
 
+  /** Creates the extension. BlueJ calls this when it loads the plugin, before {@link #startup(BlueJ)}. */
+  public TelemetryExtension() {
+  }
+
+  /**
+   * Builds and connects all parts of the plugin. The {@link ActivityMonitor} subscribes before the
+   * {@link com.example.export.SessionRecorder} so an open idle period is closed before a session
+   * ends.
+   *
+   * @param blueJ BlueJ's extension interface, used to register listeners, the menu and preferences
+   */
   @Override
   public void startup(BlueJ blueJ) {
     TelemetryCollector collector = new TelemetryCollector();
@@ -52,26 +65,51 @@ public class TelemetryExtension extends Extension {
     blueJ.setMenuGenerator(new ExportMenuGenerator(recorder, exportService));
   }
 
+  /**
+   * Checks the plugin can run on this BlueJ version.
+   *
+   * @return true if BlueJ's extensions API is version 3 or later
+   */
   @Override
   public boolean isCompatible() {
     return getExtensionsAPIVersionMajor() >= 3;
   }
 
+  /**
+   * Returns the plugin's version
+   *
+   * @return the version number
+   */
   @Override
   public String getVersion() {
     return "1.0.0";
   }
 
+  /**
+   * Returns the plugin's name
+   *
+   * @return the plugin name
+   */
   @Override
   public String getName() {
     return "BlueJ Telemetry";
   }
 
+  /**
+   * Returns a short description
+   *
+   * @return the description
+   */
   @Override
   public String getDescription() {
     return "Collects coding telemetry and exports JSON/PDF";
   }
 
+  /**
+   * Returns a web page for the plugin
+   *
+   * @return null
+   */
   @Override
   public URL getURL() {
     return null;
